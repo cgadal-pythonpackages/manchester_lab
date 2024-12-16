@@ -1,3 +1,5 @@
+import warnings
+
 import numpy as np
 import pandas as pd
 
@@ -11,7 +13,7 @@ def read_scalefile_gtkterm(mass_data_file: str, time_step: float = 0.295):
     mass_data_file : str
         path to the mass file
     time_step : float, optional
-        scale writin internal time step, by default 0.295
+        scale writing internal time step, by default 0.295. CARFEULL, the default value has been unprecisely calibrated.
 
     Returns
     -------
@@ -25,5 +27,8 @@ def read_scalefile_gtkterm(mass_data_file: str, time_step: float = 0.295):
         "float"
     )
     time = np.arange(mass_data.size) * time_step
+    warnings.warn(
+        "!!! Be carefull when using the default time step, it has been unprecisely calibrated. You should use your own and check it !!!"
+    )
 
     return time, mass_data
