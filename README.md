@@ -2,20 +2,26 @@
 
 `manchester_lab` is a python package for the use of various instruments in the experimental lab G.18 of the Manchester granular group.
 
-- `pyudv.read_mfprof`, which helps you read binary files from Met-Flow UDVs
-- `pyudv.geometry`, which helps you plot deal with multiple probe arragments, calculate the intersection points, reconstruct 2D velocity fields, etc ..
-- `pyudv.amplitude`, which helps you infer concentration from amplitude measurements
+- `manchester_lab.laser` helps you deal with the lasers
+- `manchester_lab.scale` helps you deal with the scale
 
 > [!WARNING]  
-> Although tested, this is still in development, use with caution. Feedbacks welcome.
+> Although tested, this is still in development, use with caution. Feedbacks welcome. Further modules will be added.
 
 ### Installation
 
 #### User only
 
-Using `pip3 install --upgrade https://github.com/cgadal-pythonpackages/pyudv/tarball/master`
+Using `pip3 install --upgrade https://github.com/cgadal-pythonpackages/manchester_lab/tarball/master`
 
-#### If code or development
+#### If code or development (you should probably do this)
 
-- clone the repository, e.g. `git clone https://github.com/cgadal-pythonpackages/pyudv`
-- `cd pyudv && pip3 install -e ./` will install in editable mode.
+- clone the repository, e.g. `git clone https://github.com/manchester_lab/pyudv`
+- `cd manchester_lab && pip3 install -e ./` will install in editable mode.
+
+
+### Usage
+
+- A proper documentation might be written at some point. For now, functions are documented, and this can seen after importing in python and typing `help(my_function)` or looking directly into the code.
+
+- Look at the `examples` folder for ideas on how to use this.
